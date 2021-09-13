@@ -23,6 +23,8 @@ namespace SomeLibrary.Targeted
 #endif
 
 #if NET5_0
+        public const string Target = "Net5";
+
         public TargetSpecificCode()
         {
             var p = new CsvHelper.CsvParser(null, null);
