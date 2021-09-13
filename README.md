@@ -9,7 +9,7 @@ This sample deals with a common case - take an existing library that targets .Ne
 
 A good example is HttpContext.Current as found in many ASP.NET apps and libraries, the System.Web functionality (which is where HttpContext is situated) simply does not exist as part of .Net5 and there is no direct replacement.
 
-So the approach that seems ideal is to put all of the code that can be built against .Net Standard into a .Net Standard project and remove any code that does not. Then we have a .Net Standard package that does most of what the old one did, but can be used by any existing .Net Framework app or any new .Net5/.NetCore app.
+So the approach that seems ideal is to put all of the code that can be built against .Net Standard into a .Net Standard project and remove any code that does not (doing this in such a way that the original code can be built without these odd bits needing to be present). Then we have a .Net Standard package that does most of what the old one did, but can be used by any existing .Net Framework app or any new .Net5/.NetCore app.
 
 Then we adjust that project to add two additional build targets - one for .Net Framework and the other for .Net5/.NetCore - and then use conditional compilation to ensure that as each of these additional build targets is built only the target specific code is seen and included in the build.
 
