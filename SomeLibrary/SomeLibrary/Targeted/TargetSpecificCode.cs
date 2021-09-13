@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Web;
 
 namespace SomeLibrary.Targeted
 {
@@ -10,6 +11,11 @@ namespace SomeLibrary.Targeted
     {
 #if NET472
         public const string Target = "NetF";
+
+        public TargetSpecificCode()
+        {
+            var s = HttpContext.Current;
+        }
 #endif
 
 #if NET5_0
