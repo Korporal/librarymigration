@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SomeLibrary.Targeted;
+using System;
 
 namespace Net5ConsoleApp
 {
@@ -6,7 +7,7 @@ namespace Net5ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine($"I'm uisng SomeLibrary that targets {TargetSpecificCode.Target}");
         }
     }
 }
