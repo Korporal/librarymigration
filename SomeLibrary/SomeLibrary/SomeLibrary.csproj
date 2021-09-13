@@ -7,10 +7,19 @@
   </PropertyGroup>
 
 
+  <!--========================================================================-->
+  <!-- This defines assembly references that we want to be seen by the build  -->
+  <!-- These are typically older .Net Framework assemblies that are not       -->
+  <!-- available as Nuget packages                                            -->
+  <!--========================================================================-->
+
   <ItemGroup Condition="'$(TargetFramework)'=='net472'">
     <Reference Include="System.Web" />
   </ItemGroup>
 
+  <!--========================================================================-->
+  <!-- This defines nuget packages that we want to be seen by the build.      -->
+  <!--========================================================================-->
 
   <ItemGroup Condition="'$(TargetFramework)'=='net5'">
     <PackageReference Include="CsvHelper" Version="27.1.1" />
