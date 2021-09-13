@@ -7,7 +7,7 @@ This sample deals with a common case - take an existing library that targets .Ne
 
 .Net Standard implements a lot of .Net 4.7.2 but not all and a lot of .Net5 but not all so from time to time we hit this and the code cannot be built as-is for .Net Standard.
 
-A good example if HttpContext.Current as found in many ASP.NET apps and libraries, the System.Web functionality (which is where HttpContext is situated) simply does not exist as part of .Net5 and there is no direct replacement.
+A good example is HttpContext.Current as found in many ASP.NET apps and libraries, the System.Web functionality (which is where HttpContext is situated) simply does not exist as part of .Net5 and there is no direct replacement.
 
 So the approach that seems ideal is to put all of the code that can be built against .Net Standard into a .Net Standard project and remove any code that does not. Then we have a .Net Standard package that does most of what the old one did, but can be used by any existing .Net Framework app or any new .Net5/.NetCore app.
 
