@@ -23,5 +23,5 @@ The results of this is:
 6. The end result is a SINGLE nuget package.
 7. Finally specific target consumers can simply include the package and VS ensure that the correct targeted build is seen by the consuming app.
 
-
+I found some pretty helpful information [here too](url=https://blog.inedo.com/dotnet/nuget-library-migration-strategies).
 
